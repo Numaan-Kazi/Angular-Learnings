@@ -1,22 +1,19 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Login } from './login/login';
-import { SignUp } from './signup/signup';
-import { PropBinding } from './prop-binding/prop-binding';
+import { CounterBasicProject } from './counter-basic-project/counter-basic-project';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,Login,SignUp,PropBinding],
+  imports: [CounterBasicProject],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
-  name="Numaan"
-  age=22
-  isAdmin=true;
+  name = 'Numaan';
+  age = 22;
+  isAdmin = true;
   // --
-  username="Numaan"
-  Age=22
-  Height=175.75
-  Weight=66
+  username = 'Numaan';
+  Age = 22;
+  Height = 175.75;
+  Weight = 66;
 }

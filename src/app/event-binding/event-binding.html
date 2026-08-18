@@ -1,0 +1,19 @@
+<div class="min-h-screen flex justify-center items-center mx-auto">
+  <div class="flex flex-col gap-2">
+    <span class="text-sm font-bold flex gap-1"
+      >Count is :
+      <p class="text-md font-bold text-red-900">{{ count }}</p></span
+    >
+    <!-- --using signal-- -->
+    <!-- <span class="text-sm font-bold flex gap-1">Count is : {{ count() }}</span> -->
+    <button (click)="increamentUsingSignal()" class="text-red-500 border p-2 rounded hover:bg-red-50">
+      Click Me
+    </button>
+    <button (click)="showEvent($event)" class="text-red-500 border p-2 rounded hover:bg-red-50">
+      Click On Event
+    </button>
+    <!-- --update user-- -->
+    <input (input)="updateUser($event.target.value)" />
+    <p>Your Name : {{ userName }}</p>
+  </div>
+</div>

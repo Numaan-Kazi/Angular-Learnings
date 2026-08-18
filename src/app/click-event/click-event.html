@@ -1,0 +1,45 @@
+<p>click-event works!</p>
+<!-- -- -->
+<!-- <button
+  type="submit"
+  (click)="Clickme()"
+  class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-sm transition duration-150 ease-in-out"
+>
+  Click Me
+</button> -->
+
+<div class="flex flex-col gap-5 p-6">
+  <!-- Click Event -->
+  <button
+    type="submit"
+    (click)="HandleSubmit()"
+    class="w-fit rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+  >
+    Click Me
+  </button>
+
+  <!-- Input, Focus & Blur Events -->
+  <input
+    (input)="onTyping($event)"
+    (blur)="onBlur()"
+    (focus)="onFocus()"
+    placeholder="Type something..."
+    class="w-64 rounded-md border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+  />
+
+  <!-- Keyboard Event -->
+  <input
+    (keyup)="onKeyUp($event)"
+    placeholder="Type and know the key"
+    class="w-64 rounded-md border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+  />
+
+  <!-- Mouse Events -->
+  <div
+    (mouseover)="MouseHover()"
+    (mouseleave)="MouseLeave()"
+    class="w-fit cursor-pointer rounded-md bg-gray-100 px-4 py-2 text-gray-700 hover:bg-gray-200"
+  >
+    Hover Text
+  </div>
+</div>
