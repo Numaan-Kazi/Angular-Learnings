@@ -1,0 +1,52 @@
+<p>for-loop works!</p>
+
+<!-- --map data from singal array -->
+<!-- @for (item of ARRAY1; track $index) {
+  <p>{{ $index + 1 }}. {{ item }}</p>
+} -->
+--
+<!-- --map data from array obj -->
+<!-- @for (item of ARRAY2; track $index) {
+  <p>{{ $index + 1 }}. {{ item.name }}-{{ item.age }}</p>
+} -->
+--
+<!-- map data from signle array and delete it using slice- -->
+
+<!-- @for (item of ARRAY3; track $index) {
+  <p>{{ $index + 1 }}. {{ item }}</p>
+  <button (click)="handleDelete($index)">Delete</button>
+} -->
+
+---
+
+<!-- ---$even gave you only even index not actual value-- -->
+<!-- @for (item of Numbers; track $index) {
+  @if ($even) {
+    <p>Even Numbers : {{ $index }} ={{ item }}</p>
+  }
+} -->
+
+@for (item of Numbers; track $index) {
+  <!-- $index → current index -->
+  <p>Index: {{ $index }}</p>
+
+  <!-- $first → true for first item -->
+  @if ($first) {
+    <p>First: {{ item }}</p>
+  }
+
+  <!-- $last → true for last item -->
+  @if ($last) {
+    <p>Last: {{ item }}</p>
+  }
+
+  <!-- $even → true for even index, not even value -->
+  @if ($even) {
+    <p>Even Index: {{ $index }} = {{ item }}</p>
+  }
+
+  <!-- $odd → true for odd index, not odd value -->
+  @if ($odd) {
+    <p>Odd Index: {{ $index }} = {{ item }}</p>
+  }
+}
