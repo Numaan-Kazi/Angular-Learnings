@@ -1,1 +1,33 @@
-<p>computed-signals works!</p>
+Example 1 :
+
+<div class="text-center border-b-2">
+  <p>{{ Count() }}</p>
+  <p>{{ doubleCount() }}</p>
+  <p>{{ TripleCount() }}</p>
+  <span class="flex gap-2 items-center justify-center">
+    <button type="button" (click)="reset()" class="rounded-lg border px-2 py-2">Reset</button>
+    <button type="button" (click)="increament()" class="rounded-lg border px-2 py-2">
+      Compute
+    </button>
+  </span>
+</div>
+
+Example 2 :
+
+<div class="text-center border-b-2">
+  <p>{{ fullname }}</p>
+  <p>{{ FullName() }}</p>
+</div>
+
+Example 3 :
+
+<div class="text-center border-b-2">
+  <p>Values: {{ values() }}</p>
+  <!-- --using computed-- -->
+  <p>Total is : {{ total() }}</p>
+  <!-- --using simple function-- -->
+  <p>Total is : {{ Total() }}</p>
+  <button type="button" (click)="totalValue()" class="rounded-lg border px-2 py-2">
+    Get Total
+  </button>
+</div>

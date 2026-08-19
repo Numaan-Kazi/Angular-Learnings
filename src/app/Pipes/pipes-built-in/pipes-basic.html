@@ -1,0 +1,67 @@
+example-1:
+<div class="text-center mb-10 border-b-2">
+  -----using js method-----
+  <p>{{ userName.toLowerCase() }}</p>
+  <p>{{ systemName.toUpperCase() }}</p>
+
+  -----using pipes-----
+  <p>{{ userName | lowercase }}</p>
+  <p>{{ systemName | uppercase }}</p>
+  <p>{{ systemName }}</p>
+</div>
+
+example-2
+
+<!-- --decorate date using pipes-- -->
+
+<div class="text-center mb-10 border-b-2">
+  <p>Default Date : {{ date }}</p>
+  <p>Short Date : {{ date | date: 'short' }}</p>
+  <p>Long Date : {{ date | date: 'long' }}</p>
+  <p>Custom Date : {{ date | date: 'dd/MM/yyyy' }}</p>
+  <p>Custom Date : {{ date | date: 'MM/dd/yyyy' }}</p>
+  <p>Custom Date : {{ date | date: 'yyyy/dd/MM' }}</p>
+</div>
+
+example-3
+
+<!-- --decorate date using pipes-- -->
+
+<div class="text-center mb-10 border-b-2">
+  <p>Default Date : {{ date }}</p>
+  <p>Short Date : {{ date | date: 'short' }}</p>
+  <p>Long Date : {{ date | date: 'long' }}</p>
+  <p>Custom Date : {{ date | date: 'dd/MM/yyyy' }}</p>
+  <p>Custom Date : {{ date | date: 'MM/dd/yyyy' }}</p>
+  <p>Custom Date : {{ date | date: 'yyyy/dd/MM' }}</p>
+</div>
+
+example-4
+
+<!-- --decorate currency using pipes-- -->
+
+<div class="text-center mb-10 border-b-2">
+  <p>Default currency : {{ currency }}</p>
+  <p>INR currency: {{ currency | currency: 'INR' }}</p>
+  <p>USD currency : {{ currency | currency: 'USD' }}</p>
+  <p>EUR currency : {{ currency | currency: 'EUR' }}</p>
+  <p>Custom currency : {{ currency | currency: 'INR' : 'symbol' : '1.0-0' }}</p>
+</div>
+
+example-5
+
+<!-- --decorate per using pipes-- -->
+
+<div class="text-center mb-10 border-b-2">
+  <p>Default per : {{ per }}</p>
+  <p>Using Pipe : {{ per | percent }}</p>
+</div>
+
+example-6
+
+<!-- --decorate json using pipes-- -->
+
+<div class="text-center mb-10 border-b-2">
+  <p>Default Json : {{ user.name }},{{ user.Role }}</p>
+  <p>Using Pipe : {{ user | json }}</p>
+</div>

@@ -54,3 +54,20 @@ reset() {
 this.count.set(0);
 }
 }
+
+---
+
+-Why use pipes?
+Because they keep your HTML clean and readable, especially when formatting becomes more complex.
+
+Definition:
+Built-in pipes are predefined pipes provided by Angular that help us transform or format data directly in the HTML template.
+
+| Pipe        | Use                          | Example                            |
+| ----------- | ---------------------------- | ---------------------------------- |
+| `uppercase` | Converts text to uppercase   | `{{ name \| uppercase }}`          |
+| `lowercase` | Converts text to lowercase   | `{{ name \| lowercase }}`          |
+| `currency`  | Formats a number as currency | `{{ price \| currency:'INR' }}`    |
+| `date`      | Formats a date               | `{{ today \| date:'dd/MM/yyyy' }}` |
+| `number`    | Formats a number             | `{{ price \| number:'1.2-2' }}`    |
+
