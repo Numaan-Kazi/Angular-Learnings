@@ -42,4 +42,9 @@
 
 <!-- <app-pipes-basic></app-pipes-basic> -->
 
-<app-pipes-custom></app-pipes-custom>
+<!-- <p>{{ name | CustomPipe }}</p>
+<p>{{ name?.length }}</p> -->
+
+<p>Price of Usd in India  : {{ usd | currency: 'USD' }}</p>
+<p>Convert INR  : {{ usdToinr | currency: 'INR' }}</p>
+<p>Price of usdToinr is : {{ usd | convertPipe: usdToinr | currency: 'INR' }}</p>

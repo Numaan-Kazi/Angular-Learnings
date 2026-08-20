@@ -55,6 +55,11 @@ this.count.set(0);
 }
 }
 
+Three Principle of signals are:
+1.Fine grained reactivity
+2.Signal Graph
+3.Avoid over-rendering
+
 ---
 
 -Why use pipes?
@@ -70,4 +75,3 @@ Built-in pipes are predefined pipes provided by Angular that help us transform o
 | `currency`  | Formats a number as currency | `{{ price \| currency:'INR' }}`    |
 | `date`      | Formats a date               | `{{ today \| date:'dd/MM/yyyy' }}` |
 | `number`    | Formats a number             | `{{ price \| number:'1.2-2' }}`    |
-
