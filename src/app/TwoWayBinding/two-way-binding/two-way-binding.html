@@ -1,0 +1,19 @@
+Old method of 2 way binding
+<!-- <div class="mb-4 border-b-2 text-center">
+  <input [(ngModel)]="userName" class="border"/>
+  <p>{{ userName }}</p>
+</div> -->
+<!-- =============================================== -->
+
+New method of 2 way binding
+<div class="mb-4 border-b-2 text-center">
+  <input [value]="User().name" (input)="updateUserName($event.target.value)" class="border" />
+  <p>{{ User().name }}</p>
+</div>
+<div class="mb-4 border-b-2 text-center">
+  <p>{{ User().age }}</p>
+  <button type="button" (click)="updateUserAge()" class="rounded-lg border px-2 py-2">
+    + Price
+  </button>
+</div>
+<!-- =============================================== -->

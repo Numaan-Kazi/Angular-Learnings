@@ -56,9 +56,15 @@ this.count.set(0);
 }
 
 Three Principle of signals are:
-1.Fine grained reactivity
-2.Signal Graph
-3.Avoid over-rendering
+1. **Fine-grained reactivity**
+   → Angular updates **only the specific part of the UI** that depends on a changed signal.
+
+2. **Signal Graph**
+   → A **relationship/connection between signals and their dependent values**, showing what depends on what.
+
+3. **Avoid over-rendering**
+   → Angular avoids updating **unnecessary parts of the UI** when only one signal changes.
+
 
 ---
 

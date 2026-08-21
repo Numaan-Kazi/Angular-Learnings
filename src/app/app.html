@@ -2,7 +2,7 @@
 
 <!-- get this data from app.ts using interpolation -->
 
-<!-- ========Working======== -->
+<!-- ========INterpolutions======== -->
 
 <!-- which expressions and method interpolation is except: -->
 <!-- <h1>Im a {{name}}</h1>
@@ -16,8 +16,17 @@
 <!-- <h1>{{username,Age,Height,Weight}}</h1> ==> this is not exceptable-->
 <!-- <h1>{{username}},{{Age}},{{Height}},{{Weight}}</h1>  -->
 <!--exceptable-->
+<!-- ================================================================================================ -->
+
+<!-- ---pipes [custom pipes]---- -->
+
+<!-- <p>Price of Usd in India : {{ usd | currency: 'USD' }}</p>
+<p>Convert INR : {{ usdToinr | currency: 'INR' }}</p>
+<p>Price of usdToinr is : {{ usd | convertPipe: usdToinr | currency: 'INR' }}</p> -->
+<!-- ================================================================================================ -->
 
 <!-- --components Calling-- -->
+
 <!-- <app-login></app-login>
 <app-signin></app-signin>
 <app-prop-binding></app-prop-binding> -->
@@ -42,9 +51,8 @@
 
 <!-- <app-pipes-basic></app-pipes-basic> -->
 
-<!-- <p>{{ name | CustomPipe }}</p>
-<p>{{ name?.length }}</p> -->
+<!-- <app-deep-learning></app-deep-learning> -->
 
-<p>Price of Usd in India  : {{ usd | currency: 'USD' }}</p>
-<p>Convert INR  : {{ usdToinr | currency: 'INR' }}</p>
-<p>Price of usdToinr is : {{ usd | convertPipe: usdToinr | currency: 'INR' }}</p>
+<!-- <app-two-way-binding></app-two-way-binding> -->
+
+<app-to-do></app-to-do>

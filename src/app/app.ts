@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
-import { CustomPipe } from './Pipes/Custom-pipes/custom-pipe-pipe';
-import { ConvertPipePipe } from './Pipes/Custom-pipes/convert-pipe-pipe';
-import { CommonModule } from '@angular/common';
+import { TODO } from './to-do/to-do';
+// import { TwoWayBinding } from './TwoWayBinding/two-way-binding/two-way-binding';
+// import { CustomPipe } from './Pipes/Custom-pipes/custom-pipe-pipe';
+// import { ConvertPipePipe } from './Pipes/Custom-pipes/convert-pipe-pipe';
+// import { CommonModule } from '@angular/common';
+// import { DeepLearning } from './Signals/deep-learning/deep-learning';
+// import { ClickEvent } from './Basic-examples/click-event/click-event';
 // import { SignalsBasic } from './Signals/signals-basic/signals-basic';
 // import { ComputedSignals } from './Signals/computed-signals/computed-signals';
 // import { Effect } from './Signals/effect/effect';
@@ -19,7 +23,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [CustomPipe,ConvertPipePipe,CommonModule],
+  imports: [TODO],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

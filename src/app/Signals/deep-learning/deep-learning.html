@@ -1,0 +1,37 @@
+example 1: Fine Grained Reactivity :
+<!--Angular updates only the specific part of the UI that depends on a changed signal. -->
+
+<div class="mb-4 border-b-2 text-center">
+  <p>{{ count() }}</p>
+  <p>{{ name() }}</p>
+  <!-- update only count -->
+  <button type="button" (click)="increament()" class="rounded-lg border px-2 py-2">
+    Increament
+  </button>
+</div>
+<!-- ================================================================================ -->
+
+example 2: Signal Graph:
+<!--A relationship/connection between signals and their dependent values, showing what depends on what. -->
+
+<div class="mb-4 border-b-2 text-center">
+  <p>{{ COUNT() }}</p>
+  <p>{{ DOUBLE() }}</p>
+  <!-- update only count -->
+  <button type="button" (click)="increament2()" class="rounded-lg border px-2 py-2">
+    Increament
+  </button>
+</div>
+<!-- ================================================================================ -->
+
+example 3: Avoid over-rendering:
+<!--Angular avoids updating unnecessary parts of the UI when only one signal changes. -->
+
+<div class="mb-4 border-b-2 text-center">
+  <p>Value : {{ value() | currency: 'INR' }}</p>
+  <p>Price : {{ price() | currency: 'INR' }}</p>
+  <p>Total : {{ Total() | currency: 'INR' }}</p>
+  <!-- update only count -->
+  <button type="button" (click)="updateValue()" class="rounded-lg border px-2 py-2">+ Value</button>
+  <button type="button" (click)="updatePrice()" class="rounded-lg border px-2 py-2">+ Price</button>
+</div>

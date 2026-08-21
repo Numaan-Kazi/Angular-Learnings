@@ -1,0 +1,7 @@
+<input (input)="todoInput = $event.target.value" placeholder="Enter Your Name" />
+
+<button type="button" (click)="addtodoData()" class="rounded-lg border px-2 py-2">+</button>
+
+@for (items of TodoData(); track $index) {
+  <p>{{ $index + 1 }}.{{ items?.data }}</p>
+}
