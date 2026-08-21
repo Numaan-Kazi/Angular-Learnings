@@ -1,7 +1,60 @@
-<input (input)="todoInput = $event.target.value" placeholder="Enter Your Name" />
+<div
+  class="mx-auto  max-w-md overflow-y-auto rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
+>
+  <h1 class="text-center text-lg font-semibold text-gray-800">
+    {{ 'Angular Todo' | uppercase }}
+  </h1>
 
-<button type="button" (click)="addtodoData()" class="rounded-lg border px-2 py-2">+</button>
+  <div class="my-4 flex items-center justify-between border-b pb-4 text-xs text-gray-500">
+    <p>{{ Time() | date: 'hh:mm:ss a' }}</p>
+    <p>{{ date | date: 'dd/MM/yyyy' }}</p>
+  </div>
 
-@for (items of TodoData(); track $index) {
-  <p>{{ $index + 1 }}.{{ items?.data }}</p>
-}
+  <div class="mb-6 flex gap-2">
+    <input
+      [value]="todoInput"
+      (input)="todoInput = $any($event).target.value"
+      placeholder="Add your tasks here..."
+      class="flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+    />
+
+    <button
+      type="button"
+      (click)="addtodoData()"
+      class="rounded-lg bg-blue-600 px-4 py-2 text-lg font-medium text-white transition hover:bg-blue-700"
+    >
+      +
+    </button>
+  </div>
+
+  <div class="space-y-2">
+    @for (items of TodoData(); track $index) {
+      <div
+        class="flex items-center gap-3 rounded-lg border border-gray-200 bg-gray-50 px-3 py-3 transition hover:bg-gray-100"
+      >
+        <p
+          class="min-w-0 flex-1 truncate text-sm font-medium text-gray-700"
+          [class.line-through]="isChecked()[$index]"
+        >
+          {{ $index + 1 }}. {{ items?.data }}
+        </p>
+
+        <button
+          type="button"
+          (click)="handleisChecked($index)"
+          class="rounded-md border border-green-200 px-3 py-1.5 text-xs font-medium text-green-600 transition hover:bg-green-50"
+        >
+          Checked
+        </button>
+
+        <button
+          type="button"
+          (click)="handleDelete($index)"
+          class="rounded-md border border-red-200 px-3 py-1.5 text-xs font-medium text-red-600 transition hover:bg-red-50"
+        >
+          Delete
+        </button>
+      </div>
+    }
+  </div>
+</div>
