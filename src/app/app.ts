@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { TODO } from './to-do/to-do';
+import { SignalsPropertyBinding } from './BASIC-EXAMPLE/signals-property-binding/signals-property-binding';
+// import { TODO } from './to-do/to-do';
 // import { TwoWayBinding } from './TwoWayBinding/two-way-binding/two-way-binding';
 // import { CustomPipe } from './Pipes/Custom-pipes/custom-pipe-pipe';
 // import { ConvertPipePipe } from './Pipes/Custom-pipes/convert-pipe-pipe';
@@ -23,7 +24,7 @@ import { TODO } from './to-do/to-do';
 
 @Component({
   selector: 'app-root',
-  imports: [TODO],
+  imports: [SignalsPropertyBinding],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
