@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ParentChildCommunication } from './Parent-Child/parent-child-communication/parent-child-communication';
 import { FormNgmodelSignal } from './Form/form-ngmodel-signal/form-ngmodel-signal';
+import { Cards } from './Reusable-Components/cards/cards';
 // import { SignalsPropertyBinding } from './BASIC-EXAMPLE/signals-property-binding/signals-property-binding';
 // import { TODO } from './to-do/to-do';
 // import { TwoWayBinding } from './TwoWayBinding/two-way-binding/two-way-binding';
@@ -26,7 +27,7 @@ import { FormNgmodelSignal } from './Form/form-ngmodel-signal/form-ngmodel-signa
 
 @Component({
   selector: 'app-root',
-  imports: [FormNgmodelSignal],
+  imports: [Cards],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
