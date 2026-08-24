@@ -1,0 +1,43 @@
+<h1 class="mb-6 text-xl font-semibold text-gray-800">Template Driven Form</h1>
+
+<!-- ---------------Ng MOdule------------- -->
+<!-- <input [ngModel]="name()" (ngModelChange)="name.set($event)" placeholder="Enter Your name">
+<input [ngModel]="email()" (ngModelChange)="email.set($event)" placeholder="Enter Your email">
+<button (click)="handleSubmit()" class="rounded-lg border px-2 py-2">Submit</button> -->
+<!-- --forms Data-- -->
+<!-- <p>Name : {{name()}}</p>
+<p>Email: {{email()}}</p> -->
+
+<!-- -------------Using signal------------ -->
+
+<h2 class="mb-3 text-lg font-medium text-gray-700">Using New and recomended method</h2>
+
+<form [formGroup]="form" class="space-y-3">
+  <input
+    formControlName="name"
+    placeholder="Your Name"
+    class="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+  />
+
+  <input
+    formControlName="email"
+    placeholder="Your Email"
+    class="w-full rounded-lg border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+  />
+
+  <button
+    (click)="submitForm()"
+    class="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+  >
+    Submit
+  </button>
+</form>
+
+<!-- 2 ways to get data in html-- -->
+
+<!-- 1.using forms value -->
+<p class="mt-5 text-sm text-gray-600">Name : {{ form.get('name')?.value }}</p>
+<p class="text-sm text-gray-600">Email : {{ form.get('email')?.value }}</p>
+
+<!-- 2.using whole object + built in signal -->
+<p class="mt-2 text-sm text-gray-600">Json Data : {{ userSignal() | json }}</p>

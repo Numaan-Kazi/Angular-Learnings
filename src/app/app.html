@@ -25,6 +25,22 @@
 <p>Price of usdToinr is : {{ usd | convertPipe: usdToinr | currency: 'INR' }}</p> -->
 <!-- ================================================================================================ -->
 
+<!-- ====Parent to child communication==== -->
+<!-- --Old way --- -->
+
+<!-- <h1>Parent Component</h1>
+<app-parent-child-communication [name]="ParentData"></app-parent-child-communication> -->
+<!-- ====child to Parent communication==== -->
+<!-- <app-parent-child-communication (notify)="onMessage($event)"></app-parent-child-communication>
+<p>Message : {{ message }}</p> -->
+
+<!-- --New way-- -->
+
+<!-- <parent-child-communication #child></parent-child-communication>
+<p>Data From Child : {{ child.message() }}</p> -->
+
+<!-- ================================================================================================ -->
+
 <!-- --components Calling-- -->
 
 <!-- <app-login></app-login>
@@ -57,4 +73,6 @@
 
 <!-- <app-to-do></app-to-do> -->
 
-<app-signals-property-binding></app-signals-property-binding>
+<!-- <app-signals-property-binding></app-signals-property-binding> -->
+
+<app-form-ngmodel-signal></app-form-ngmodel-signal>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { SignalsPropertyBinding } from './BASIC-EXAMPLE/signals-property-binding/signals-property-binding';
+import { ParentChildCommunication } from './Parent-Child/parent-child-communication/parent-child-communication';
+import { FormNgmodelSignal } from './Form/form-ngmodel-signal/form-ngmodel-signal';
+// import { SignalsPropertyBinding } from './BASIC-EXAMPLE/signals-property-binding/signals-property-binding';
 // import { TODO } from './to-do/to-do';
 // import { TwoWayBinding } from './TwoWayBinding/two-way-binding/two-way-binding';
 // import { CustomPipe } from './Pipes/Custom-pipes/custom-pipe-pipe';
@@ -24,7 +26,7 @@ import { SignalsPropertyBinding } from './BASIC-EXAMPLE/signals-property-binding
 
 @Component({
   selector: 'app-root',
-  imports: [SignalsPropertyBinding],
+  imports: [FormNgmodelSignal],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -41,4 +43,20 @@ export class App {
   // --custom-pipe--
   usd = 20;
   usdToinr = 10;
+
+
+   // 1.old way---
+  // --Parent to child communication--
+
+  // ParentData: string = 'Hello User How you doing !!';
+  // ---child to parent---
+  // message = '';
+  // onMessage(msg: string) {
+  //   this.message = msg;
+  // }
+  // --------
+
+  // 2.new way-----
+
+
 }
