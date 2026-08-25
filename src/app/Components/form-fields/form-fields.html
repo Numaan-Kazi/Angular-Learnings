@@ -1,0 +1,11 @@
+<label class="flex">{{ label() }}</label>
+
+<!-- simple method -->
+<!-- <input [type]="type()" [value]="value()" class="rounded-lg border border-gray-300 px-3 py-2" [class]="class()" /> -->
+
+<input
+  [type]="type()"
+  (input)="onChange($event.target.value)"
+  class="rounded-lg border border-gray-300 px-3 py-2"
+  [class]="class()"
+/>

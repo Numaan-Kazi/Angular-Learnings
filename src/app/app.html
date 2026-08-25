@@ -2,7 +2,7 @@
 
 <!-- get this data from app.ts using interpolation -->
 
-<!-- ========INterpolutions======== -->
+<!-- ========INTERPOLUTIONS======== -->
 
 <!-- which expressions and method interpolation is except: -->
 <!-- <h1>Im a {{name}}</h1>
@@ -18,14 +18,14 @@
 <!--exceptable-->
 <!-- ================================================================================================ -->
 
-<!-- ---pipes [custom pipes]---- -->
+<!-- ===PIPES [CUSTOM PIPES]=== -->
 
 <!-- <p>Price of Usd in India : {{ usd | currency: 'USD' }}</p>
 <p>Convert INR : {{ usdToinr | currency: 'INR' }}</p>
 <p>Price of usdToinr is : {{ usd | convertPipe: usdToinr | currency: 'INR' }}</p> -->
 <!-- ================================================================================================ -->
 
-<!-- ====Parent to child communication==== -->
+<!-- ====PARENT TO CHILD COMMUNICATION==== -->
 <!-- --Old way --- -->
 
 <!-- <h1>Parent Component</h1>
@@ -38,14 +38,36 @@
 
 <!-- <parent-child-communication #child></parent-child-communication>
 <p>Data From Child : {{ child.message() }}</p> -->
-
 <!-- ================================================================================================ -->
 
-<!-- --components Calling-- -->
+<!-- ===REUSABLE COMPONENT==== -->
 
-<!-- <app-login></app-login>
-<app-signin></app-signin>
-<app-prop-binding></app-prop-binding> -->
+<!-- <app-cards
+  title="Angular Learning"
+  description="Reusable card data passed from the parent component."
+>
+  <p>This content is projected from the parent using Angular content projection.</p>
+</app-cards> -->
+<!-- ================================================================================================ -->
+
+<!-- ===ROUTING LEARNING HOW TO USE ROUTING=== -->
+
+<nav class="bg-blue-100 flex gap-6 border-b border-gray-200 py-3 justify-center">
+  <a routerLink="" class="text-sm font-medium text-blue-600"> HOME </a>
+  <a routerLink="/about" class="text-sm font-medium text-blue-600"> ABOUT </a>
+  <a routerLink="/contact" class="text-sm font-medium text-blue-600"> CONTACT </a>
+</nav>
+<div class="my-5 flex justify-center">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- ===components Calling=== -->
+
+<!-- <app-login></app-login> -->
+
+<!-- <app-signin></app-signin> -->
+
+<!-- <app-prop-binding></app-prop-binding>  -->
 
 <!-- <app-event-binding></app-event-binding> -->
 
@@ -76,11 +98,3 @@
 <!-- <app-signals-property-binding></app-signals-property-binding> -->
 
 <!-- <app-form-ngmodel-signal></app-form-ngmodel-signal> -->
-
-<app-cards
-  title="Angular Learning"
-  description="Reusable card data passed from the parent component."
->
-  <p>This content is projected from the parent using Angular content projection.</p>
-  <button  class="rounded-lg border px-2 py-2">Update data</button>
-</app-cards>

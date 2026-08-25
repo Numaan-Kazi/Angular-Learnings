@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { ParentChildCommunication } from './Parent-Child/parent-child-communication/parent-child-communication';
-import { FormNgmodelSignal } from './Form/form-ngmodel-signal/form-ngmodel-signal';
-import { Cards } from './Reusable-Components/cards/cards';
+import { RouterLink, RouterOutlet } from '@angular/router';
+// import { ParentChildCommunication } from './TwoWayBinding/parent-child-communication/parent-child-communication';
+// import { FormNgmodelSignal } from './Form/form-ngmodel-signal/form-ngmodel-signal';
+// import { Cards } from './Components/cards/cards';
 // import { SignalsPropertyBinding } from './BASIC-EXAMPLE/signals-property-binding/signals-property-binding';
 // import { TODO } from './to-do/to-do';
 // import { TwoWayBinding } from './TwoWayBinding/two-way-binding/two-way-binding';
@@ -27,7 +28,7 @@ import { Cards } from './Reusable-Components/cards/cards';
 
 @Component({
   selector: 'app-root',
-  imports: [Cards],
+  imports: [RouterLink,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -45,8 +46,7 @@ export class App {
   usd = 20;
   usdToinr = 10;
 
-
-   // 1.old way---
+  // 1.old way---
   // --Parent to child communication--
 
   // ParentData: string = 'Hello User How you doing !!';
@@ -56,8 +56,4 @@ export class App {
   //   this.message = msg;
   // }
   // --------
-
-  // 2.new way-----
-
-
 }
