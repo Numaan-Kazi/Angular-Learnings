@@ -4,6 +4,7 @@ import { AboutPage } from './about-page/about-page';
 import { ContactPage } from './contact-page/contact-page';
 import { Profile } from './about-page/profile/profile';
 import { Setting } from './about-page/setting/setting';
+import { LazyLoading } from './lazy-loading/lazy-loading';
 
 export const routes: Routes = [
   //basic routes for learning pupose only
@@ -17,4 +18,8 @@ export const routes: Routes = [
     ],
   },
   { path: 'contact', component: ContactPage },
+  {
+    path: 'lazyload',
+    loadComponent: () => import('./lazy-loading/lazy-loading').then((m) => m.LazyLoading),
+  },
 ];
